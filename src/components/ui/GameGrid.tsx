@@ -19,6 +19,6 @@ const GameGrid = () => {
 };
 
 export default GameGrid;
-function useGame() {
-  throw new Error("Function not implemented.");
-}
+// function useGame() {
+//   throw new Error("Function not implemented.");
+// }
