@@ -4,11 +4,12 @@ import { CanceledError } from "axios";
 import useData from "./useData";
 import { Genre } from "./useGenres";
 
+
 export interface platform{
     id:number;
     name:string;
     slug:string;
-    metacritic:number;
+    //metacritic:number;
 }
 
 export interface Game {
@@ -20,6 +21,8 @@ export interface Game {
 }
 
 
-const useGames = (selectedGenre: Genre | null) => useData<Game>('/games',{params:{genres:selectedGenre?.id}},[])
+const useGames = (selectedGenre: Genre | null,selectedPlatform:platform|null) => useData<Game>('/games',{params:{genres:selectedGenre?.id,platforms:selectedPlatform?.id}},[
+  selectedPlatform?.id
+])
 
 export default useGames
