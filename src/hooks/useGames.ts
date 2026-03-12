@@ -18,7 +18,8 @@ export interface Game {
   background_image: string ;
   id: number;
   name: string;
-  parent_platforms:{platform:platform}[]
+  parent_platforms:{platform:platform}[];
+  rating_top:number;
 }
  
  
